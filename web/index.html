@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Auge · Compras e conciliação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- display=optional: a fonte só entra se chegar a tempo; nada pula na tela depois -->
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Saira:wght@500;600;700&display=optional" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo" id="topo">
+  <div class="conteiner">
+    <a class="marca" href="#painel" aria-label="Auge, painel">
+      <img class="versao-clara" src="assets/logo-navy.png" alt="Auge Gestão Integrada" width="113" height="44">
+      <img class="versao-escura" src="assets/logo-branco.png" alt="Auge Gestão Integrada" width="113" height="44">
+    </a>
+    <nav aria-label="Navegação principal"><ul class="menu" id="menu"></ul></nav>
+    <div class="acoes-topo">
+      <span class="pilula-demo" title="Tudo o que aparece aqui é inventado para demonstração">Dados fictícios</span>
+      <div class="config">
+        <button class="botao botao-contorno botao-icone" type="button" id="btn-config" aria-expanded="false" aria-controls="sub-config" aria-label="Configurações e acessibilidade" title="Configurações e acessibilidade">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+        </button>
+        <div class="submenu submenu-direita" id="sub-config">
+          <a class="opcao" href="#regras"><strong>Regras do sistema</strong><span>Os limiares que decidem, com o porquê</span></a>
+          <button class="opcao" type="button" data-abre="dlg-a11y"><strong>Acessibilidade</strong><span>Tema, tamanho do texto, contraste e movimento</span></button>
+        </div>
+      </div>
+      <button class="botao botao-principal botao-topo" type="button" data-acao="nova-aquisicao">Nova aquisição</button>
+      <button class="botao botao-contorno botao-icone botao-menu" type="button" data-abre="dlg-menu" aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo" tabindex="-1"></main>
+
+<!-- ============================== Diálogos ============================== -->
+
+<dialog class="modal" id="dlg-form" aria-labelledby="t-form">
+  <div class="dlg-cabeca"><h2 id="t-form"></h2><button class="fechar" type="button" data-fecha aria-label="Fechar"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13"/></svg></button></div>
+  <form class="dlg-corpo" id="form-generico" novalidate></form>
+</dialog>
+
+<dialog class="modal" id="dlg-a11y" aria-labelledby="t-a11y">
+  <div class="dlg-cabeca"><h2 id="t-a11y">Acessibilidade</h2><button class="fechar" type="button" data-fecha aria-label="Fechar"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13"/></svg></button></div>
+  <form class="dlg-corpo" id="form-a11y">
+    <fieldset><legend>Tema</legend><div class="segmentos">
+      <label class="segmento"><input type="radio" name="tema" value="light">Claro</label>
+      <label class="segmento"><input type="radio" name="tema" value="dark">Escuro</label>
+      <label class="segmento"><input type="radio" name="tema" value="auto">Automático</label></div></fieldset>
+    <fieldset><legend>Tamanho do texto</legend><div class="segmentos">
+      <label class="segmento"><input type="radio" name="texto" value="padrao">Padrão</label>
+      <label class="segmento" style="font-size: 1.0625rem"><input type="radio" name="texto" value="grande">Grande</label>
+      <label class="segmento" style="font-size: 1.1875rem"><input type="radio" name="texto" value="maior">Maior</label></div></fieldset>
+    <label class="chave"><span>Alto contraste<small>Textos e bordas mais fortes, sem efeitos de fundo.</small></span><input type="checkbox" name="contraste"></label>
+    <label class="chave"><span>Reduzir movimento<small>Desliga transições e animações.</small></span><input type="checkbox" name="movimento"></label>
+    <label class="chave"><span>Sublinhar links<small>Links identificados também pelo traço, não só pela cor.</small></span><input type="checkbox" name="links"></label>
+    <p class="nota-pequena">As escolhas ficam salvas neste navegador.</p>
+  </form>
+</dialog>
+
+<dialog class="menu-movel" id="dlg-menu" aria-labelledby="t-menu">
+  <div class="dlg-cabeca"><h2 id="t-menu">Menu</h2><button class="fechar" type="button" data-fecha aria-label="Fechar"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13"/></svg></button></div>
+  <div class="dlg-corpo" id="menu-movel"></div>
+</dialog>
+
+<div class="aviso" role="status" id="aviso"></div>
+<p class="sr-only" aria-live="polite" id="anuncio"></p>
+
+<script>/*__DEMO__*/</script>
+<script src="js/dados-exemplo.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
