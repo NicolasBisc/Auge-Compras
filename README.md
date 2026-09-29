@@ -1,10 +1,3 @@
-# Roteiro do README
-
-Sep 29, 2026 · @Nelsimar
-
-**Como usar:** escreva cada resposta do seu jeito, no espaço "Sua resposta". Não copie do relatório: explicar com as próprias palavras é o que prepara para a banca. Quando terminar uma seção, me avise. Eu só formato, corrijo a ortografia e deixo sugestões pequenas como comentário, sem trocar as suas ideias.
-
-Em cada seção: as perguntas que ela precisa responder, onde encontrar a informação e um tamanho sugerido.
 
 ## Progresso
 
