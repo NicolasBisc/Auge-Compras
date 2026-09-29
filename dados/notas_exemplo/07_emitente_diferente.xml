@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Nota fiscal FICTÍCIA para demonstração. Subconjunto do layout NF-e 4.00. -->
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+  <NFe>
+    <infNFe Id="NFe41260990333444000100550010000090071470299727" versao="4.00">
+      <ide><nNF>9007</nNF><dhEmi>2026-09-27T09:30:00-03:00</dhEmi></ide>
+      <emit><CNPJ>90333444000100</CNPJ><xNome>Vértice Certificação Digital</xNome></emit>
+      <dest><CNPJ>90121212000100</CNPJ><xNome>Auge Contabilidade (demonstração)</xNome></dest>
+      <det nItem="1">
+        <prod>
+          <cProd>A1-CPF</cProd>
+          <xProd>Voucher certificado digital e-CPF A1</xProd>
+          <uCom>UN</uCom>
+          <qCom>5.0000</qCom>
+          <vUnCom>74.9000000000</vUnCom>
+          <vProd>374.50</vProd>
+          <xPed>AQ-2026-0057</xPed>
+        </prod>
+      </det>
+      <total><ICMSTot><vNF>374.50</vNF></ICMSTot></total>
+    </infNFe>
+  </NFe>
+  <protNFe><infProt><chNFe>41260990333444000100550010000090071470299727</chNFe></infProt></protNFe>
+</nfeProc>
