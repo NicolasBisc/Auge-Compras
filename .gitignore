@@ -1,0 +1,4 @@
+auge.db
+__pycache__/
+.pytest_cache/
+web/demo.html
